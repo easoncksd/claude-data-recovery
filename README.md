@@ -7,6 +7,18 @@ Claude Data Recovery runs locally, uses only the Python standard library, and ne
 > [!IMPORTANT]
 > Claude exports can contain private conversations, account details, memories, and extracted attachment text. Never commit your export or generated recovery output to GitHub.
 
+## Browser generator
+
+This repository also includes an experimental static browser generator in `web/`.
+It keeps the generated offline viewer separate from the import UI, so the existing
+viewer layout is not replaced.
+
+Open `web/index.html` or `web/generator.html` in a browser, choose the official
+Claude export `.zip` file, then generate the local recovery viewer. You can also
+choose an already-extracted export folder that contains `conversations.json`.
+
+All parsing happens in the browser. The export is not uploaded.
+
 ## What it creates
 
 - A single-file offline web viewer with full-text search and filters

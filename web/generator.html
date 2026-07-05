@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Claude Data Recovery</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">LOCAL ONLY</div>
+        <h1>Claude Data Recovery</h1>
+        <p>选择 Claude 官方导出的数据，在浏览器本地生成可搜索的离线恢复包。</p>
+      </div>
+      <div class="privacy">数据不会上传</div>
+    </section>
+
+    <section class="panel">
+      <label class="drop-zone" for="zipInput">
+        <input id="zipInput" type="file" accept=".zip,application/zip">
+        <span class="drop-title">选择 Claude 导出文件</span>
+        <span class="drop-copy">请选择 Claude 官方导出的 .zip 文件。也可以用下方入口选择已解压目录。</span>
+      </label>
+
+      <label class="folder-zone" for="folderInput">
+        <input id="folderInput" type="file" multiple webkitdirectory accept=".json,application/json">
+        <span>选择已解压目录</span>
+      </label>
+
+      <div class="selected">
+        <div class="selected-head">
+          <strong>已选择文件</strong>
+          <button id="clearBtn" class="btn secondary" type="button">清空</button>
+        </div>
+        <ul id="fileList"></ul>
+      </div>
+
+      <div class="actions">
+        <button id="generateBtn" class="btn primary" type="button" disabled>生成恢复包</button>
+      </div>
+
+      <pre id="status" class="status">等待选择 conversations.json</pre>
+    </section>
+
+    <section id="previewPanel" class="preview" hidden>
+      <div class="selected-head">
+        <strong>生成预览</strong>
+        <button id="openPreviewBtn" class="btn secondary" type="button">新窗口打开</button>
+      </div>
+      <iframe id="previewFrame" title="Claude recovery preview"></iframe>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
