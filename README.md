@@ -21,29 +21,7 @@ All parsing happens in the browser. The export is not uploaded.
 
 ## 中文网页使用教程
 
-这个仓库现在可以直接当作网页工具使用，不需要安装 Python，也不需要运行命令。
-
-### 方法一：直接打开网页链接
-
-如果仓库开启了 GitHub Pages，用户只需要打开这个链接：
-
-```text
-https://easoncksd.github.io/claude-data-recovery/web/generator.html
-```
-
-然后按下面步骤操作：
-
-1. 点击 `选择 Claude 导出文件`
-2. 选择 Claude 官方导出的 `.zip` 文件
-3. 点击 `生成恢复包`
-4. 在下方预览生成的恢复页面
-5. 点击 `新窗口打开`，在完整页面里搜索和查看对话
-
-整个解析过程都在用户自己的浏览器里完成，Claude 导出数据不会上传到 GitHub，也不会上传到服务器。
-
-### 方法二：下载到本地使用
-
-如果没有开启 GitHub Pages，或者用户更想离线使用，可以这样做：
+这个仓库可以下载到本地当作网页工具使用，不需要安装 Python，也不需要运行命令。
 
 1. 打开 GitHub 仓库页面
 2. 点击绿色 `Code`
@@ -53,6 +31,8 @@ https://easoncksd.github.io/claude-data-recovery/web/generator.html
 6. 选择自己的 Claude 导出 `.zip`
 7. 点击 `生成恢复包`
 8. 点击 `新窗口打开`
+
+整个解析过程都在用户自己的浏览器里完成，Claude 导出数据不会上传到 GitHub，也不会上传到服务器。
 
 ### 生成后的页面能做什么
 
@@ -79,6 +59,7 @@ claude-data-recovery "/你的/Claude导出文件夹" -o "./恢复结果"
 ```
 
 生成后，直接用浏览器打开 `恢复结果/index.html`。
+
 ## Output structure
 
 ```text
